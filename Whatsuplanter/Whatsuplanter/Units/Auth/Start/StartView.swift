@@ -35,6 +35,10 @@ struct StartView: View {
                 VStack(spacing: 16) {
                     NextButton(title: "Folytatás",
                                imageSystemName: "arrow.right") {
+                        Task {
+                            await viewModel.initUser()
+                        }
+                        
                         DispatchQueue.main.async {
                             rootViewModel.setFlow(.main)
                         }

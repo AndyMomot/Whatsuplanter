@@ -18,13 +18,9 @@ struct TabBar: View {
             
             VStack(spacing: .zero) {
                 TabView(selection: $viewModel.selection) {
-                    ZStack {
-                        Color.blue
-                            .ignoresSafeArea()
-                        Text("Home")
-                            .tag(TabBarSelectionView.home)
-                            .environmentObject(viewModel)
-                    }
+                    HomeView()
+                        .tag(TabBarSelectionView.home)
+                        .environmentObject(viewModel)
                     
                     Text("Finances")
                         .tag(TabBarSelectionView.finances)
@@ -34,7 +30,7 @@ struct TabBar: View {
                         .tag(TabBarSelectionView.ecoCalculator)
                         .environmentObject(viewModel)
                     
-                    Text("Tips")
+                    TipsView()
                         .tag(TabBarSelectionView.tips)
                     
                     Text("Settings")
