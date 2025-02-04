@@ -1,0 +1,22 @@
+xcassets:
+  - inputs:
+    - Whatsuplanter/Resources/Images
+    outputs:
+      - templateName: swift5
+        output: Whatsuplanter/Resources/Images/Images.generated.swift
+  - inputs:
+    - Whatsuplanter/Resources/Colors/Colors.xcassets
+    outputs:
+      - templateName: swift5
+        output: Whatsuplanter/Resources/Colors/Colors.generated.swift
+        params:
+          enumName: Colors
+          
+fonts:
+  - inputs: Whatsuplanter/Resources/Fonts
+    outputs:
+    - templateName: swift5
+      output: Whatsuplanter/Resources/Fonts/Fonts.generated.swift
+      params:
+        enumName: Fonts
+
