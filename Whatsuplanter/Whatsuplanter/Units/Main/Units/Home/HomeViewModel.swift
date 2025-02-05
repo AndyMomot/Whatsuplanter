@@ -11,8 +11,7 @@ import UIKit.UIImage
 extension HomeView {
     final class ViewModel: ObservableObject {
         @Published var profileImage: UIImage = Asset.profileSample.image
-        @Published var currentAmount: Double = 0.0
-        @Published var targetAmount: Double = 0.0
+        @Published var user = User()
         
         var tips: [TipsView.TipModel] = [
             .init(title: "Hogyan válasszunk növényeket városi környezetbe?",
@@ -82,9 +81,25 @@ extension HomeView {
 }
 
 extension HomeView.ViewModel {
-    func getProfileImage() async {
-        await MainActor.run { [weak self] in
-            self?.profileImage = Asset.profile.image
+    func getUser() async {
+        if let user = DefaultsService.shared.user {
+            await getProfileImage(for: user.id)
+            await MainActor.run { [weak self] in
+                self?.user = user
+            }
+        }
+    }
+    
+    func getProfileImage(for id: String) async {
+        if let imageData = await FileManagerService().fetchImage(with: id),
+            let uiImage = UIImage(data: imageData) {
+            await MainActor.run { [weak self] in
+                self?.profileImage = uiImage
+            }
+        } else {
+            await MainActor.run { [weak self] in
+                self?.profileImage = Asset.profile.image
+            }
         }
     }
 }

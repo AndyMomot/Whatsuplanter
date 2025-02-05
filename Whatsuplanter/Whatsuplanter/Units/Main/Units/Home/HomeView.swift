@@ -36,7 +36,7 @@ struct HomeView: View {
             }
             .onAppear {
                 Task {
-                    await viewModel.getProfileImage()
+                    await viewModel.getUser()
                 }
             }
         }
@@ -82,16 +82,16 @@ private extension HomeView {
                     .foregroundStyle(.black)
                     .font(Fonts.DMSans.bold.swiftUIFont(size: 16))
                 
-                if viewModel.targetAmount > .zero {
+                if viewModel.user.targetAmount > .zero {
                     VStack(spacing: 0) {
-                        ProgressView(value: viewModel.currentAmount,
-                                     total: viewModel.targetAmount)
+                        ProgressView(value: viewModel.user.currentAmount,
+                                     total: viewModel.user.targetAmount)
                         .tint(.leafGreen)
                         
                         HStack {
-                            Text("\(Int(viewModel.currentAmount))")
+                            Text("\(Int(viewModel.user.currentAmount))")
                             Spacer()
-                            Text("\(Int(viewModel.targetAmount))")
+                            Text("\(Int(viewModel.user.targetAmount))")
                         }
                         .foregroundStyle(.black)
                         .font(Fonts.DMSans.regular.swiftUIFont(size: 12))

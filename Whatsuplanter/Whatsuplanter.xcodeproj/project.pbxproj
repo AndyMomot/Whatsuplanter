@@ -64,6 +64,9 @@
 		4738A5152D52609200F899FD /* TipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4738A5122D52609200F899FD /* TipsView.swift */; };
 		4738A5162D52609200F899FD /* TipsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4738A5132D52609200F899FD /* TipsViewModel.swift */; };
 		4738A5182D5262BA00F899FD /* TipCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4738A5172D5262BA00F899FD /* TipCell.swift */; };
+		4738A5232D536FA100F899FD /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4738A5202D536FA100F899FD /* SettingsView.swift */; };
+		4738A5242D536FA100F899FD /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4738A5212D536FA100F899FD /* SettingsViewModel.swift */; };
+		4738A5282D5378A400F899FD /* SettingsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4738A5272D5378A400F899FD /* SettingsButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -126,6 +129,9 @@
 		4738A5122D52609200F899FD /* TipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsView.swift; sourceTree = "<group>"; };
 		4738A5132D52609200F899FD /* TipsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsViewModel.swift; sourceTree = "<group>"; };
 		4738A5172D5262BA00F899FD /* TipCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipCell.swift; sourceTree = "<group>"; };
+		4738A5202D536FA100F899FD /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		4738A5212D536FA100F899FD /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		4738A5272D5378A400F899FD /* SettingsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -457,6 +463,7 @@
 			children = (
 				4738A5042D52540100F899FD /* Home */,
 				4738A5142D52609200F899FD /* Tips */,
+				4738A5222D536FA100F899FD /* Settings */,
 			);
 			path = Units;
 			sourceTree = "<group>";
@@ -514,6 +521,24 @@
 				4738A5132D52609200F899FD /* TipsViewModel.swift */,
 			);
 			path = Tips;
+			sourceTree = "<group>";
+		};
+		4738A5222D536FA100F899FD /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				4738A5262D53789B00F899FD /* Views */,
+				4738A5202D536FA100F899FD /* SettingsView.swift */,
+				4738A5212D536FA100F899FD /* SettingsViewModel.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		4738A5262D53789B00F899FD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4738A5272D5378A400F899FD /* SettingsButton.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -636,6 +661,7 @@
 				4738A4B32D521BA100F899FD /* CustomTextField.swift in Sources */,
 				4738A4B42D521BA100F899FD /* Images.generated.swift in Sources */,
 				4738A5152D52609200F899FD /* TipsView.swift in Sources */,
+				4738A5282D5378A400F899FD /* SettingsButton.swift in Sources */,
 				4738A5162D52609200F899FD /* TipsViewModel.swift in Sources */,
 				4738A4B52D521BA100F899FD /* OnboardingView.swift in Sources */,
 				4738A5182D5262BA00F899FD /* TipCell.swift in Sources */,
@@ -665,6 +691,8 @@
 				4738A4DE2D521BA100F899FD /* View+Additions.swift in Sources */,
 				4738A4DF2D521BA100F899FD /* RootViewController.swift in Sources */,
 				4738A4E02D521BA100F899FD /* TabBar.swift in Sources */,
+				4738A5232D536FA100F899FD /* SettingsView.swift in Sources */,
+				4738A5242D536FA100F899FD /* SettingsViewModel.swift in Sources */,
 				4738A4E12D521BA100F899FD /* ShareSheet.swift in Sources */,
 				4738A4E32D521BA100F899FD /* String+Additions.swift in Sources */,
 			);
