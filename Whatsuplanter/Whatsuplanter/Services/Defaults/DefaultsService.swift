@@ -46,32 +46,17 @@ extension DefaultsService {
         }
     }
     
-    var projects: [Project] {
+    var financeItems: [FinanceItem] {
         get {
-            if let data = standard.data(forKey: Keys.projects.rawValue),
-               let items = try? JSONDecoder().decode([Project].self, from: data) {
+            if let data = standard.data(forKey: Keys.financeItems.rawValue),
+               let items = try? JSONDecoder().decode([FinanceItem].self, from: data) {
                 return items
             }
             return []
         }
         set {
             if let data = try? JSONEncoder().encode(newValue) {
-                standard.set(data, forKey: Keys.projects.rawValue)
-            }
-        }
-    }
-    
-    var teams: [Team] {
-        get {
-            if let data = standard.data(forKey: Keys.teams.rawValue),
-               let items = try? JSONDecoder().decode([Team].self, from: data) {
-                return items
-            }
-            return []
-        }
-        set {
-            if let data = try? JSONEncoder().encode(newValue) {
-                standard.set(data, forKey: Keys.teams.rawValue)
+                standard.set(data, forKey: Keys.financeItems.rawValue)
             }
         }
     }
@@ -82,7 +67,6 @@ extension DefaultsService {
     enum Keys: String {
         case flow
         case user
-        case projects
-        case teams
+        case financeItems
     }
 }

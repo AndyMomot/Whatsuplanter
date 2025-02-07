@@ -11,7 +11,6 @@
 		4738A4062D5218A800F899FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4738A3AF2D5218A800F899FD /* Assets.xcassets */; };
 		4738A4082D5218A800F899FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4738A3B22D5218A800F899FD /* LaunchScreen.storyboard */; };
 		4738A49C2D521BA100F899FD /* MenuPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4738A4292D521BA100F899FD /* MenuPicker.swift */; };
-		4738A49D2D521BA100F899FD /* TeamMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4738A4352D521BA100F899FD /* TeamMember.swift */; };
 		4738A49F2D521BA100F899FD /* PreloaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4738A4572D521BA100F899FD /* PreloaderView.swift */; };
 		4738A4A02D521BA100F899FD /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4738A42B2D521BA100F899FD /* NavigationBarView.swift */; };
 		4738A4A32D521BA100F899FD /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4738A4522D521BA100F899FD /* OnboardingViewModel.swift */; };
@@ -20,11 +19,9 @@
 		4738A4A92D521BA100F899FD /* CustomProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4738A4212D521BA100F899FD /* CustomProgressView.swift */; };
 		4738A4AB2D521BA100F899FD /* Fonts.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4738A43B2D521BA100F899FD /* Fonts.generated.swift */; };
 		4738A4AF2D521BA100F899FD /* NextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4738A42D2D521BA100F899FD /* NextButton.swift */; };
-		4738A4B22D521BA100F899FD /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4738A4342D521BA100F899FD /* Team.swift */; };
 		4738A4B32D521BA100F899FD /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4738A4232D521BA100F899FD /* CustomTextField.swift */; };
 		4738A4B42D521BA100F899FD /* Images.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4738A4482D521BA100F899FD /* Images.generated.swift */; };
 		4738A4B52D521BA100F899FD /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4738A4512D521BA100F899FD /* OnboardingView.swift */; };
-		4738A4B72D521BA100F899FD /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4738A4332D521BA100F899FD /* Project.swift */; };
 		4738A4B92D521BA100F899FD /* CircularProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4738A41F2D521BA100F899FD /* CircularProgressBar.swift */; };
 		4738A4BA2D521BA100F899FD /* Date+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4738A4112D521BA100F899FD /* Date+Additions.swift */; };
 		4738A4BB2D521BA100F899FD /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4738A4252D521BA100F899FD /* DatePickerView.swift */; };
@@ -71,6 +68,13 @@
 		47CFFDC12D5680C4009582C7 /* FAQView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CFFDBE2D5680C4009582C7 /* FAQView.swift */; };
 		47CFFDC22D5680C4009582C7 /* FAQViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CFFDBF2D5680C4009582C7 /* FAQViewModel.swift */; };
 		47CFFDC42D56819C009582C7 /* FAQCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CFFDC32D56819C009582C7 /* FAQCell.swift */; };
+		47CFFDCF2D56862B009582C7 /* FinanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CFFDCB2D56862B009582C7 /* FinanceView.swift */; };
+		47CFFDD02D56862B009582C7 /* FinanceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CFFDCC2D56862B009582C7 /* FinanceViewModel.swift */; };
+		47CFFDD42D5686F3009582C7 /* NoFinanceItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CFFDD32D5686F3009582C7 /* NoFinanceItemsView.swift */; };
+		47CFFDD62D56896B009582C7 /* FinanceItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CFFDD52D56896B009582C7 /* FinanceItem.swift */; };
+		47CFFDDF2D568C28009582C7 /* CreateFinanceItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CFFDDC2D568C28009582C7 /* CreateFinanceItemView.swift */; };
+		47CFFDE02D568C28009582C7 /* CreateFinanceItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CFFDDD2D568C28009582C7 /* CreateFinanceItemViewModel.swift */; };
+		47CFFDE22D569652009582C7 /* UIImage+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CFFDE12D569652009582C7 /* UIImage+Additions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,9 +102,6 @@
 		4738A42B2D521BA100F899FD /* NavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
 		4738A42D2D521BA100F899FD /* NextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextButton.swift; sourceTree = "<group>"; };
 		4738A42F2D521BA100F899FD /* SwiftUIViewWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIViewWebView.swift; sourceTree = "<group>"; };
-		4738A4332D521BA100F899FD /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
-		4738A4342D521BA100F899FD /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
-		4738A4352D521BA100F899FD /* TeamMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMember.swift; sourceTree = "<group>"; };
 		4738A4362D521BA100F899FD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4738A4382D521BA100F899FD /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		4738A4392D521BA100F899FD /* Colors.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.generated.swift; sourceTree = "<group>"; };
@@ -140,6 +141,13 @@
 		47CFFDBE2D5680C4009582C7 /* FAQView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQView.swift; sourceTree = "<group>"; };
 		47CFFDBF2D5680C4009582C7 /* FAQViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQViewModel.swift; sourceTree = "<group>"; };
 		47CFFDC32D56819C009582C7 /* FAQCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQCell.swift; sourceTree = "<group>"; };
+		47CFFDCB2D56862B009582C7 /* FinanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceView.swift; sourceTree = "<group>"; };
+		47CFFDCC2D56862B009582C7 /* FinanceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceViewModel.swift; sourceTree = "<group>"; };
+		47CFFDD32D5686F3009582C7 /* NoFinanceItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoFinanceItemsView.swift; sourceTree = "<group>"; };
+		47CFFDD52D56896B009582C7 /* FinanceItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceItem.swift; sourceTree = "<group>"; };
+		47CFFDDC2D568C28009582C7 /* CreateFinanceItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFinanceItemView.swift; sourceTree = "<group>"; };
+		47CFFDDD2D568C28009582C7 /* CreateFinanceItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFinanceItemViewModel.swift; sourceTree = "<group>"; };
+		47CFFDE12D569652009582C7 /* UIImage+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Additions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +213,7 @@
 				4738A4132D521BA100F899FD /* String+Additions.swift */,
 				4738A4142D521BA100F899FD /* UINavigationController+Additions.swift */,
 				4738A4152D521BA100F899FD /* View+Additions.swift */,
+				47CFFDE12D569652009582C7 /* UIImage+Additions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -327,10 +336,8 @@
 		4738A4372D521BA100F899FD /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				4738A4332D521BA100F899FD /* Project.swift */,
-				4738A4342D521BA100F899FD /* Team.swift */,
-				4738A4352D521BA100F899FD /* TeamMember.swift */,
 				4738A4362D521BA100F899FD /* User.swift */,
+				47CFFDD52D56896B009582C7 /* FinanceItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -471,6 +478,7 @@
 			isa = PBXGroup;
 			children = (
 				4738A5042D52540100F899FD /* Home */,
+				47CFFDCE2D56862B009582C7 /* FinanceFlow */,
 				4738A5142D52609200F899FD /* Tips */,
 				4738A5222D536FA100F899FD /* SettingsFlow */,
 			);
@@ -575,6 +583,42 @@
 				47CFFDC32D56819C009582C7 /* FAQCell.swift */,
 			);
 			path = FAQ;
+			sourceTree = "<group>";
+		};
+		47CFFDCD2D56862B009582C7 /* Finance */ = {
+			isa = PBXGroup;
+			children = (
+				47CFFDD22D5686E6009582C7 /* Views */,
+				47CFFDCB2D56862B009582C7 /* FinanceView.swift */,
+				47CFFDCC2D56862B009582C7 /* FinanceViewModel.swift */,
+			);
+			path = Finance;
+			sourceTree = "<group>";
+		};
+		47CFFDCE2D56862B009582C7 /* FinanceFlow */ = {
+			isa = PBXGroup;
+			children = (
+				47CFFDCD2D56862B009582C7 /* Finance */,
+				47CFFDDE2D568C28009582C7 /* CreateFinanceItem */,
+			);
+			path = FinanceFlow;
+			sourceTree = "<group>";
+		};
+		47CFFDD22D5686E6009582C7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				47CFFDD32D5686F3009582C7 /* NoFinanceItemsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		47CFFDDE2D568C28009582C7 /* CreateFinanceItem */ = {
+			isa = PBXGroup;
+			children = (
+				47CFFDDC2D568C28009582C7 /* CreateFinanceItemView.swift */,
+				47CFFDDD2D568C28009582C7 /* CreateFinanceItemViewModel.swift */,
+			);
+			path = CreateFinanceItem;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -683,26 +727,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				4738A49C2D521BA100F899FD /* MenuPicker.swift in Sources */,
-				4738A49D2D521BA100F899FD /* TeamMember.swift in Sources */,
 				4738A49F2D521BA100F899FD /* PreloaderView.swift in Sources */,
 				4738A4A02D521BA100F899FD /* NavigationBarView.swift in Sources */,
 				4738A4A32D521BA100F899FD /* OnboardingViewModel.swift in Sources */,
+				47CFFDD62D56896B009582C7 /* FinanceItem.swift in Sources */,
 				4738A4A52D521BA100F899FD /* BackButton.swift in Sources */,
 				4738A50C2D5259FA00F899FD /* DashedContainerView.swift in Sources */,
 				4738A4A72D521BA100F899FD /* TabBarViewModel.swift in Sources */,
 				4738A4A92D521BA100F899FD /* CustomProgressView.swift in Sources */,
+				47CFFDD42D5686F3009582C7 /* NoFinanceItemsView.swift in Sources */,
 				4738A4AB2D521BA100F899FD /* Fonts.generated.swift in Sources */,
 				47CFFDC12D5680C4009582C7 /* FAQView.swift in Sources */,
 				47CFFDC22D5680C4009582C7 /* FAQViewModel.swift in Sources */,
 				4738A4AF2D521BA100F899FD /* NextButton.swift in Sources */,
-				4738A4B22D521BA100F899FD /* Team.swift in Sources */,
 				4738A4B32D521BA100F899FD /* CustomTextField.swift in Sources */,
 				4738A4B42D521BA100F899FD /* Images.generated.swift in Sources */,
 				4738A5152D52609200F899FD /* TipsView.swift in Sources */,
 				4738A5162D52609200F899FD /* TipsViewModel.swift in Sources */,
 				4738A4B52D521BA100F899FD /* OnboardingView.swift in Sources */,
 				4738A5182D5262BA00F899FD /* TipCell.swift in Sources */,
-				4738A4B72D521BA100F899FD /* Project.swift in Sources */,
+				47CFFDE22D569652009582C7 /* UIImage+Additions.swift in Sources */,
 				4738A4B92D521BA100F899FD /* CircularProgressBar.swift in Sources */,
 				47CFFDB62D56807F009582C7 /* SettingsButton.swift in Sources */,
 				47CFFDB72D56807F009582C7 /* SettingsView.swift in Sources */,
@@ -720,10 +764,14 @@
 				4738A4C82D521BA100F899FD /* FileManager+Image.swift in Sources */,
 				4738A4C92D521BA100F899FD /* StartViewModel.swift in Sources */,
 				4738A4CA2D521BA100F899FD /* Double+Additions.swift in Sources */,
+				47CFFDDF2D568C28009582C7 /* CreateFinanceItemView.swift in Sources */,
+				47CFFDE02D568C28009582C7 /* CreateFinanceItemViewModel.swift in Sources */,
 				4738A4CB2D521BA100F899FD /* SwiftUIViewWebView.swift in Sources */,
 				4738A4CC2D521BA100F899FD /* RootContentViewModel.swift in Sources */,
 				4738A4CE2D521BA100F899FD /* FileManagerService.swift in Sources */,
 				4738A4CF2D521BA100F899FD /* StartView.swift in Sources */,
+				47CFFDCF2D56862B009582C7 /* FinanceView.swift in Sources */,
+				47CFFDD02D56862B009582C7 /* FinanceViewModel.swift in Sources */,
 				4738A4D12D521BA100F899FD /* User.swift in Sources */,
 				4738A4D52D521BA100F899FD /* RootContentView.swift in Sources */,
 				4738A4D62D521BA100F899FD /* TabBarCustomView.swift in Sources */,

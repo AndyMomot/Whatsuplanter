@@ -25,6 +25,7 @@ internal enum Asset {
   internal static let dataFillingIcon = ImageAsset(name: "dataFillingIcon")
   internal static let faqIcon = ImageAsset(name: "faqIcon")
   internal static let finaceIcone = ImageAsset(name: "finaceIcone")
+  internal static let finance = ImageAsset(name: "finance")
   internal static let flower = ImageAsset(name: "flower")
   internal static let gardeningTipsIcon = ImageAsset(name: "gardeningTipsIcon")
   internal static let leaf = ImageAsset(name: "leaf")

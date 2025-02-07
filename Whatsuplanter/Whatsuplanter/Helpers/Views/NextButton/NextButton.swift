@@ -45,7 +45,7 @@ struct NextButton: View {
                 ))
                 
             }
-            .frame(height: 44)
+            .frame(height: 56)
         }
         .buttonStyle(PlainButtonStyle())
     }

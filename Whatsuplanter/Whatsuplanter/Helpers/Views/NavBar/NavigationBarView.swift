@@ -26,6 +26,7 @@ struct NavigationBarView: View {
             Text(title)
                 .foregroundStyle(.white)
                 .font(Fonts.DMSans.bold.swiftUIFont(size: 14))
+                .multilineTextAlignment(.center)
             
             Spacer()
             

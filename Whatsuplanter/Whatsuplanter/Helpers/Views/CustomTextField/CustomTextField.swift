@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CustomTextField: View {
-    var title: String = ""
+    var title: String
     var titleColor: Color = .black
     var placeholder: String = ""
     var isDynamic = false
@@ -17,7 +17,7 @@ struct CustomTextField: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             Text(title)
-                .font(Fonts.DMSans.medium.swiftUIFont(size: 16))
+                .font(Fonts.DMSans.bold.swiftUIFont(size: 12))
                 .foregroundStyle(titleColor)
             
             if isDynamic {
