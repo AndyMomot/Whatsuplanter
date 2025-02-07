@@ -84,8 +84,8 @@ private extension HomeView {
                 
                 if viewModel.user.targetAmount > .zero {
                     VStack(spacing: 0) {
-                        ProgressView(value: viewModel.user.currentAmount,
-                                     total: viewModel.user.targetAmount)
+                        ProgressView(value: Double(viewModel.user.currentAmount),
+                                     total: Double(viewModel.user.targetAmount))
                         .tint(.leafGreen)
                         
                         HStack {

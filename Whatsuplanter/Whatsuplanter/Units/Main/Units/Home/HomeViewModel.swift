@@ -98,7 +98,7 @@ extension HomeView.ViewModel {
             }
         } else {
             await MainActor.run { [weak self] in
-                self?.profileImage = Asset.profile.image
+                self?.profileImage = Asset.profileSample.image
             }
         }
     }

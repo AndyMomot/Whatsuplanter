@@ -14,6 +14,9 @@ extension SettingsView {
         @Published var isCanEdit = false
         @Published var showImagePicker = false
         @Published var isPushNotifications = false
+        
+        @Published var currentAmount = "0"
+        @Published var targetAmount = "0"
     }
 }
 
@@ -22,7 +25,10 @@ extension SettingsView.ViewModel {
         if let user = DefaultsService.shared.user {
             await getProfileImage(for: user.id)
             await MainActor.run { [weak self] in
-                self?.userName = user.name
+                guard let self else { return }
+                self.userName = user.name
+                self.currentAmount = "\(user.currentAmount)"
+                self.targetAmount = "\(user.targetAmount)"
             }
         }
     }
@@ -35,17 +41,57 @@ extension SettingsView.ViewModel {
             }
         } else {
             await MainActor.run { [weak self] in
-                self?.profileImage = Asset.profile.image
+                self?.profileImage = Asset.profileSample.image
             }
         }
     }
     
     func updateUserData() async {
-        var user = DefaultsService.shared.user
-        user?.name = userName
+        let user = User(
+            name: userName,
+            currentAmount: Int(currentAmount) ?? .zero,
+            targetAmount: Int(targetAmount) ?? .zero
+        )
         
-        if let id = user?.id, let imageData = profileImage.jpegData(compressionQuality: 1) {
-            FileManagerService().saveImage(data: imageData, for: id)
+        DefaultsService.shared.user = user
+        
+        if let imageData = profileImage.jpegData(compressionQuality: 1) {
+            FileManagerService().saveImage(data: imageData, for: user.id)
+        }
+    }
+    
+    func checkNotificationPermission() async -> Bool {
+        let permission = await NotificationManager.shared.checkPermission()
+        var isGranted: Bool {
+            switch permission {
+            case .authorized, .provisional:
+                return true
+            default:
+                return false
+            }
+        }
+        
+        return isGranted
+    }
+    
+    func updateToggle() async {
+        let isGranted = await checkNotificationPermission()
+        await MainActor.run { [weak self] in
+            guard let self else { return }
+            self.isPushNotifications = isGranted
+        }
+    }
+    
+    func onToggle() async {
+        do {
+            let granted = try await NotificationManager.shared.requestPermission()
+            if !granted {
+                NotificationManager.shared.openNotificationSettings()
+            } else {
+                await updateToggle()
+            }
+        } catch {
+            NotificationManager.shared.openNotificationSettings()
         }
     }
 }

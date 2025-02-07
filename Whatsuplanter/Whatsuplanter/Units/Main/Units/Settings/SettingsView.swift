@@ -115,7 +115,32 @@ struct SettingsView: View {
                                 
                                 Toggle("", isOn: $viewModel.isPushNotifications)
                                     .labelsHidden()
+                                    .simultaneousGesture(
+                                        TapGesture().onEnded {
+                                            Task {
+                                                await viewModel.onToggle()
+                                            }
+                                        }
+                                    )
                             }
+                            
+                            DashedContainerView {
+                                VStack(spacing: 16) {
+                                    CustomTextField(
+                                        title: "Összegyűjtött pénzeszközök",
+                                        titleColor: .black,
+                                        text: $viewModel.currentAmount
+                                    )
+                                    
+                                    CustomTextField(
+                                        title: "Begyűjtendő cél",
+                                        titleColor: .black,
+                                        text: $viewModel.targetAmount
+                                    )
+                                }
+                            }
+                            .disabled(!viewModel.isCanEdit)
+                            .keyboardType(.numberPad)
                         }
                         .padding(.horizontal)
                         .padding(.bottom)
@@ -123,9 +148,11 @@ struct SettingsView: View {
                     .scrollIndicators(.automatic)
                 }
             }
+            .hideKeyboardWhenTappedAround()
             .onAppear {
                 Task {
                     await viewModel.getUser()
+                    await viewModel.updateToggle()
                 }
             }
             .sheet(isPresented: $viewModel.showImagePicker) {

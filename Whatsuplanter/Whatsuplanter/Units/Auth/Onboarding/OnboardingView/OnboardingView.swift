@@ -31,7 +31,7 @@ struct OnboardingView: View {
                     
                     Button {
                         withAnimation {
-                            currentPageIndex = item.lastIndex
+                            viewModel.showStartView.toggle()
                         }
                     } label: {
                         Text("Ugrás")

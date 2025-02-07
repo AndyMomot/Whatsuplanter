@@ -37,11 +37,12 @@ struct StartView: View {
                                imageSystemName: "arrow.right") {
                         Task {
                             await viewModel.initUser()
+                            await MainActor.run {
+                                rootViewModel.setFlow(.main)
+                            }
                         }
                         
-                        DispatchQueue.main.async {
-                            rootViewModel.setFlow(.main)
-                        }
+                        
                     }
                     
                     Button {

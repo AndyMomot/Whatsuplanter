@@ -33,7 +33,7 @@ struct TabBar: View {
                     TipsView()
                         .tag(TabBarSelectionView.tips)
                     
-                    Text("Settings")
+                    SettingsView()
                         .tag(TabBarSelectionView.settings)
                         .environmentObject(viewModel)
                 }

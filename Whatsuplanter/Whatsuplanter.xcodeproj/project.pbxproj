@@ -67,6 +67,7 @@
 		4738A5232D536FA100F899FD /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4738A5202D536FA100F899FD /* SettingsView.swift */; };
 		4738A5242D536FA100F899FD /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4738A5212D536FA100F899FD /* SettingsViewModel.swift */; };
 		4738A5282D5378A400F899FD /* SettingsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4738A5272D5378A400F899FD /* SettingsButton.swift */; };
+		47CFFDA82D5613C3009582C7 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CFFDA62D5613C3009582C7 /* NotificationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -132,6 +133,7 @@
 		4738A5202D536FA100F899FD /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		4738A5212D536FA100F899FD /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		4738A5272D5378A400F899FD /* SettingsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsButton.swift; sourceTree = "<group>"; };
+		47CFFDA62D5613C3009582C7 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -389,6 +391,7 @@
 		4738A4502D521BA100F899FD /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				47CFFDA72D5613C3009582C7 /* NotificationManager */,
 				4738A44C2D521BA100F899FD /* Defaults */,
 				4738A44F2D521BA100F899FD /* FileManager */,
 			);
@@ -541,6 +544,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		47CFFDA72D5613C3009582C7 /* NotificationManager */ = {
+			isa = PBXGroup;
+			children = (
+				47CFFDA62D5613C3009582C7 /* NotificationManager.swift */,
+			);
+			path = NotificationManager;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -668,6 +679,7 @@
 				4738A4B72D521BA100F899FD /* Project.swift in Sources */,
 				4738A4B92D521BA100F899FD /* CircularProgressBar.swift in Sources */,
 				4738A5052D52540100F899FD /* HomeView.swift in Sources */,
+				47CFFDA82D5613C3009582C7 /* NotificationManager.swift in Sources */,
 				4738A5062D52540100F899FD /* HomeViewModel.swift in Sources */,
 				4738A4BA2D521BA100F899FD /* Date+Additions.swift in Sources */,
 				4738A4BB2D521BA100F899FD /* DatePickerView.swift in Sources */,

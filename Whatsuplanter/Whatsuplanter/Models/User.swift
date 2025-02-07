@@ -4,8 +4,8 @@
 import Foundation
 
 struct User: Identifiable, Codable {
-    private(set) var id = UUID().uuidString
+    private(set) var id = "User"
     var name: String = "User"
-    var currentAmount: Double = .zero
-    var targetAmount: Double = .zero
+    var currentAmount: Int = .zero
+    var targetAmount: Int = .zero
 }

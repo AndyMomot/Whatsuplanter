@@ -29,7 +29,6 @@ internal enum Asset {
   internal static let gardeningTipsIcon = ImageAsset(name: "gardeningTipsIcon")
   internal static let leaf = ImageAsset(name: "leaf")
   internal static let pprivacyPolicyIcon = ImageAsset(name: "pprivacyPolicyIcon")
-  internal static let profile = ImageAsset(name: "profile")
   internal static let profileSample = ImageAsset(name: "profileSample")
   internal static let rightArrow = ImageAsset(name: "rightArrow")
   internal static let background = ImageAsset(name: "background")
