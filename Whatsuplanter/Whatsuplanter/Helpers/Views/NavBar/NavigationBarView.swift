@@ -40,6 +40,7 @@ struct NavigationBarView: View {
         .padding(.horizontal, 25)
         .background(.leafGreen)
         .cornerRadius(16, corners: [.bottomLeft, .bottomRight])
+        .navigationBarBackButtonHidden(showBackButton)
     }
 }
 

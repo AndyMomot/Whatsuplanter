@@ -64,10 +64,13 @@
 		4738A5152D52609200F899FD /* TipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4738A5122D52609200F899FD /* TipsView.swift */; };
 		4738A5162D52609200F899FD /* TipsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4738A5132D52609200F899FD /* TipsViewModel.swift */; };
 		4738A5182D5262BA00F899FD /* TipCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4738A5172D5262BA00F899FD /* TipCell.swift */; };
-		4738A5232D536FA100F899FD /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4738A5202D536FA100F899FD /* SettingsView.swift */; };
-		4738A5242D536FA100F899FD /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4738A5212D536FA100F899FD /* SettingsViewModel.swift */; };
-		4738A5282D5378A400F899FD /* SettingsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4738A5272D5378A400F899FD /* SettingsButton.swift */; };
 		47CFFDA82D5613C3009582C7 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CFFDA62D5613C3009582C7 /* NotificationManager.swift */; };
+		47CFFDB62D56807F009582C7 /* SettingsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CFFDB12D56807F009582C7 /* SettingsButton.swift */; };
+		47CFFDB72D56807F009582C7 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CFFDB32D56807F009582C7 /* SettingsView.swift */; };
+		47CFFDB82D56807F009582C7 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CFFDB42D56807F009582C7 /* SettingsViewModel.swift */; };
+		47CFFDC12D5680C4009582C7 /* FAQView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CFFDBE2D5680C4009582C7 /* FAQView.swift */; };
+		47CFFDC22D5680C4009582C7 /* FAQViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CFFDBF2D5680C4009582C7 /* FAQViewModel.swift */; };
+		47CFFDC42D56819C009582C7 /* FAQCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CFFDC32D56819C009582C7 /* FAQCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -130,10 +133,13 @@
 		4738A5122D52609200F899FD /* TipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsView.swift; sourceTree = "<group>"; };
 		4738A5132D52609200F899FD /* TipsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsViewModel.swift; sourceTree = "<group>"; };
 		4738A5172D5262BA00F899FD /* TipCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipCell.swift; sourceTree = "<group>"; };
-		4738A5202D536FA100F899FD /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		4738A5212D536FA100F899FD /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
-		4738A5272D5378A400F899FD /* SettingsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsButton.swift; sourceTree = "<group>"; };
 		47CFFDA62D5613C3009582C7 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		47CFFDB12D56807F009582C7 /* SettingsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsButton.swift; sourceTree = "<group>"; };
+		47CFFDB32D56807F009582C7 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		47CFFDB42D56807F009582C7 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		47CFFDBE2D5680C4009582C7 /* FAQView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQView.swift; sourceTree = "<group>"; };
+		47CFFDBF2D5680C4009582C7 /* FAQViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQViewModel.swift; sourceTree = "<group>"; };
+		47CFFDC32D56819C009582C7 /* FAQCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -466,7 +472,7 @@
 			children = (
 				4738A5042D52540100F899FD /* Home */,
 				4738A5142D52609200F899FD /* Tips */,
-				4738A5222D536FA100F899FD /* Settings */,
+				4738A5222D536FA100F899FD /* SettingsFlow */,
 			);
 			path = Units;
 			sourceTree = "<group>";
@@ -526,22 +532,13 @@
 			path = Tips;
 			sourceTree = "<group>";
 		};
-		4738A5222D536FA100F899FD /* Settings */ = {
+		4738A5222D536FA100F899FD /* SettingsFlow */ = {
 			isa = PBXGroup;
 			children = (
-				4738A5262D53789B00F899FD /* Views */,
-				4738A5202D536FA100F899FD /* SettingsView.swift */,
-				4738A5212D536FA100F899FD /* SettingsViewModel.swift */,
+				47CFFDB52D56807F009582C7 /* Settings */,
+				47CFFDC02D5680C4009582C7 /* FAQ */,
 			);
-			path = Settings;
-			sourceTree = "<group>";
-		};
-		4738A5262D53789B00F899FD /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				4738A5272D5378A400F899FD /* SettingsButton.swift */,
-			);
-			path = Views;
+			path = SettingsFlow;
 			sourceTree = "<group>";
 		};
 		47CFFDA72D5613C3009582C7 /* NotificationManager */ = {
@@ -550,6 +547,34 @@
 				47CFFDA62D5613C3009582C7 /* NotificationManager.swift */,
 			);
 			path = NotificationManager;
+			sourceTree = "<group>";
+		};
+		47CFFDB22D56807F009582C7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				47CFFDB12D56807F009582C7 /* SettingsButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		47CFFDB52D56807F009582C7 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				47CFFDB22D56807F009582C7 /* Views */,
+				47CFFDB32D56807F009582C7 /* SettingsView.swift */,
+				47CFFDB42D56807F009582C7 /* SettingsViewModel.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		47CFFDC02D5680C4009582C7 /* FAQ */ = {
+			isa = PBXGroup;
+			children = (
+				47CFFDBE2D5680C4009582C7 /* FAQView.swift */,
+				47CFFDBF2D5680C4009582C7 /* FAQViewModel.swift */,
+				47CFFDC32D56819C009582C7 /* FAQCell.swift */,
+			);
+			path = FAQ;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -667,17 +692,21 @@
 				4738A4A72D521BA100F899FD /* TabBarViewModel.swift in Sources */,
 				4738A4A92D521BA100F899FD /* CustomProgressView.swift in Sources */,
 				4738A4AB2D521BA100F899FD /* Fonts.generated.swift in Sources */,
+				47CFFDC12D5680C4009582C7 /* FAQView.swift in Sources */,
+				47CFFDC22D5680C4009582C7 /* FAQViewModel.swift in Sources */,
 				4738A4AF2D521BA100F899FD /* NextButton.swift in Sources */,
 				4738A4B22D521BA100F899FD /* Team.swift in Sources */,
 				4738A4B32D521BA100F899FD /* CustomTextField.swift in Sources */,
 				4738A4B42D521BA100F899FD /* Images.generated.swift in Sources */,
 				4738A5152D52609200F899FD /* TipsView.swift in Sources */,
-				4738A5282D5378A400F899FD /* SettingsButton.swift in Sources */,
 				4738A5162D52609200F899FD /* TipsViewModel.swift in Sources */,
 				4738A4B52D521BA100F899FD /* OnboardingView.swift in Sources */,
 				4738A5182D5262BA00F899FD /* TipCell.swift in Sources */,
 				4738A4B72D521BA100F899FD /* Project.swift in Sources */,
 				4738A4B92D521BA100F899FD /* CircularProgressBar.swift in Sources */,
+				47CFFDB62D56807F009582C7 /* SettingsButton.swift in Sources */,
+				47CFFDB72D56807F009582C7 /* SettingsView.swift in Sources */,
+				47CFFDB82D56807F009582C7 /* SettingsViewModel.swift in Sources */,
 				4738A5052D52540100F899FD /* HomeView.swift in Sources */,
 				47CFFDA82D5613C3009582C7 /* NotificationManager.swift in Sources */,
 				4738A5062D52540100F899FD /* HomeViewModel.swift in Sources */,
@@ -698,13 +727,12 @@
 				4738A4D12D521BA100F899FD /* User.swift in Sources */,
 				4738A4D52D521BA100F899FD /* RootContentView.swift in Sources */,
 				4738A4D62D521BA100F899FD /* TabBarCustomView.swift in Sources */,
+				47CFFDC42D56819C009582C7 /* FAQCell.swift in Sources */,
 				4738A4D92D521BA100F899FD /* SceneDelegate.swift in Sources */,
 				4738A4DC2D521BA100F899FD /* DefaultsService.swift in Sources */,
 				4738A4DE2D521BA100F899FD /* View+Additions.swift in Sources */,
 				4738A4DF2D521BA100F899FD /* RootViewController.swift in Sources */,
 				4738A4E02D521BA100F899FD /* TabBar.swift in Sources */,
-				4738A5232D536FA100F899FD /* SettingsView.swift in Sources */,
-				4738A5242D536FA100F899FD /* SettingsViewModel.swift in Sources */,
 				4738A4E12D521BA100F899FD /* ShareSheet.swift in Sources */,
 				4738A4E32D521BA100F899FD /* String+Additions.swift in Sources */,
 			);

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct TipsView: View {
+    var showBackButton = false
     @StateObject private var viewModel = ViewModel()
     
     var body: some View {
@@ -18,7 +19,8 @@ struct TipsView: View {
                     .resizable()
                 
                 VStack(spacing: 16) {
-                    NavigationBarView(title: "Kertészeti tippek")
+                    NavigationBarView(title: "Kertészeti tippek",
+                                      showBackButton: showBackButton)
                     
                     ScrollView {
                         VStack(spacing: 16) {

@@ -83,25 +83,19 @@ struct SettingsView: View {
                                     SettingsButton(
                                         imageName: Asset.gardeningTipsIcon.name,
                                         title: "Kertészeti tippek") {
-                                            
-                                        }
-                                    
-                                    SettingsButton(
-                                        imageName: Asset.dataFillingIcon.name,
-                                        title: "Adatok kitöltési folyamata") {
-                                            
+                                            viewModel.showTips.toggle()
                                         }
                                     
                                     SettingsButton(
                                         imageName: Asset.faqIcon.name,
                                         title: "Látogasson el a GYIK oldalra") {
-                                            
+                                            viewModel.showFAQ.toggle()
                                         }
                                     
                                     SettingsButton(
                                         imageName: Asset.pprivacyPolicyIcon.name,
                                         title: "Adatvédelmi irányelvek") {
-                                            
+                                            viewModel.showPrivacyPolicy.toggle()
                                         }
                                 }
                             }
@@ -157,6 +151,15 @@ struct SettingsView: View {
             }
             .sheet(isPresented: $viewModel.showImagePicker) {
                 ImagePicker(selectedImage: $viewModel.profileImage)
+            }
+            .navigationDestination(isPresented: $viewModel.showTips) {
+                TipsView(showBackButton: true)
+            }
+            .navigationDestination(isPresented: $viewModel.showFAQ) {
+                FAQView()
+            }
+            .sheet(isPresented: $viewModel.showPrivacyPolicy) {
+                SwiftUIViewWebView(url: viewModel.privacyPolicyURL)
             }
         }
     }

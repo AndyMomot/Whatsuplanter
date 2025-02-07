@@ -17,6 +17,11 @@ extension SettingsView {
         
         @Published var currentAmount = "0"
         @Published var targetAmount = "0"
+        
+        @Published var showTips = false
+        @Published var showFAQ = false
+        @Published var showPrivacyPolicy = false
+        let privacyPolicyURL = URL(string: "https://google.com")
     }
 }
 
