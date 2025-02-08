@@ -21,4 +21,12 @@ extension FinanceView.ViewModel {
             self?.financeItems = items
         }
     }
+    
+    func delete(item: FinanceItem) async {
+        DefaultsService.shared.financeItems.removeAll(where: { $0.id == item.id })
+        item.images.forEach { id in
+            FileManagerService().removeImage(with: id)
+        }
+        await getFinanceItems()
+    }
 }

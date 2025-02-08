@@ -23,13 +23,14 @@ struct FinanceView: View {
                     ScrollView {
                         VStack(spacing: 16) {
                             if viewModel.financeItems.isEmpty {
-                                NoFinanceItemsView {
-                                    viewModel.showCreateFinanceItem.toggle()
-                                }
+                                NoFinanceItemsView()
                             } else {
                                 ForEach(viewModel.financeItems) { item in
-                                    Text(item.name)
-                                        .fontWeight(.bold)
+                                    FinanceItemView(item: item) { _ in
+                                        Task {
+                                            await viewModel.delete(item: item)
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -37,6 +38,12 @@ struct FinanceView: View {
                         .padding(.bottom)
                     }
                     .scrollIndicators(.never)
+                    
+                    NextButton(title: "Kampány létrehozása", imageSystemName: "arrow.right") {
+                        viewModel.showCreateFinanceItem.toggle()
+                    }
+                    .padding(.horizontal)
+                    .padding(.bottom)
                 }
             }
             .onAppear {

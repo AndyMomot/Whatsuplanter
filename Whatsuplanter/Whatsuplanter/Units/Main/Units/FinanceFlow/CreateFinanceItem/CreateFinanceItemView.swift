@@ -95,11 +95,7 @@ struct CreateFinanceItemView: View {
                     title: "Előnézet megtekintése",
                     imageSystemName: "eye.fill") {
                         Task {
-                            if await viewModel.save() {
-                                await MainActor.run {
-                                    dismiss.callAsFunction()
-                                }
-                            }
+                            await viewModel.createPreviewItem()
                         }
                     }
                     .padding()
@@ -109,6 +105,24 @@ struct CreateFinanceItemView: View {
         .hideKeyboardWhenTappedAround()
         .sheet(isPresented: $viewModel.showImagePicker) {
             ImagePicker(selectedImage: $viewModel.selectedImage)
+        }
+        .sheet(item: $viewModel.previewItem) { item in
+            FinanceItemView(
+                item: item,
+                isPreview: true,
+                savedImages: viewModel.selectedImages) { _ in
+                    viewModel.previewItem = nil
+                    Task {
+                        if await viewModel.save() {
+                            await MainActor.run {
+                                dismiss.callAsFunction()
+                            }
+                        }
+                    }
+                }
+                .presentationDetents([.medium, .large])
+                .padding(.top)
+                .padding(.horizontal)
         }
     }
 }
@@ -121,6 +135,7 @@ private extension CreateFinanceItemView {
             .frame(width: bounds.width * 0.4,
                    height: bounds.width * 0.3)
             .clipShape(RoundedRectangle(cornerRadius: 16))
+            .shadow(radius: 1)
             .overlay {
                 VStack {
                     HStack {

@@ -9,9 +9,11 @@ import UIKit.UIImage
 import CryptoKit
 
 extension UIImage {
-    func sha256Hash() -> String? {
+    func sha256Hash(appending: String? = nil) -> String? {
         guard let imageData = self.pngData() else { return nil }
         let hash = SHA256.hash(data: imageData)
-        return hash.compactMap { String(format: "%02x", $0) }.joined()
+        var id = hash.compactMap { String(format: "%02x", $0) }.joined()
+        if let appending { id.append(appending) }
+        return id
     }
 }

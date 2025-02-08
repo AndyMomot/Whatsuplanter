@@ -44,7 +44,7 @@ struct FileManagerService {
             try fileManager.removeItem(at: fileURL)
             print("File removed successfully for key: \(path)")
         } catch {
-            print("Error removing file: \(path)")
+            print("Error removing file: \(path), \(error)")
         }
     }
     

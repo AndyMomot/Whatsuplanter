@@ -30,4 +30,9 @@ extension FileManagerService {
         let imageData = getFile(forPath: path)
         return imageData
     }
+    
+    func removeImage(with id: String) {
+        let path = FileManagerService.Keys.image(id: id).path
+        removeFile(forPath: path)
+    }
 }

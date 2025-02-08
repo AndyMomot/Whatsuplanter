@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "targetAmount.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

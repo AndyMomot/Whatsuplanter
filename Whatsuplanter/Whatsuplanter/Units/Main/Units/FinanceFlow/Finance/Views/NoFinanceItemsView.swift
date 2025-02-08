@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct NoFinanceItemsView: View {
-    var action: () -> Void
     
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
@@ -33,10 +32,6 @@ struct NoFinanceItemsView: View {
                 .scaledToFit()
             
             Spacer()
-            
-            NextButton(title: "Kampány létrehozása", imageSystemName: "arrow.right") {
-                action()
-            }
         }
     }
 }
@@ -59,6 +54,6 @@ private extension NoFinanceItemsView {
 }
 
 #Preview {
-    NoFinanceItemsView() {}
+    NoFinanceItemsView()
         .padding()
 }
