@@ -26,7 +26,7 @@ struct TabBar: View {
                         .tag(TabBarSelectionView.finances)
                         .environmentObject(viewModel)
                     
-                    Text("Eco Calculator")
+                    StartCalculationView()
                         .tag(TabBarSelectionView.ecoCalculator)
                         .environmentObject(viewModel)
                     

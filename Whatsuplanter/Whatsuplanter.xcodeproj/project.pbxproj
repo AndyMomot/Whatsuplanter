@@ -76,6 +76,13 @@
 		47CFFDE02D568C28009582C7 /* CreateFinanceItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CFFDDD2D568C28009582C7 /* CreateFinanceItemViewModel.swift */; };
 		47CFFDE22D569652009582C7 /* UIImage+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CFFDE12D569652009582C7 /* UIImage+Additions.swift */; };
 		47CFFDE82D576AFC009582C7 /* FinanceItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CFFDE62D576AFC009582C7 /* FinanceItemView.swift */; };
+		47CFFDF52D58A7BD009582C7 /* StartCalculationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CFFDF12D58A7BD009582C7 /* StartCalculationView.swift */; };
+		47CFFDF62D58A7BD009582C7 /* StartCalculationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CFFDF22D58A7BD009582C7 /* StartCalculationViewModel.swift */; };
+		47CFFDFF2D58AA21009582C7 /* CalculatorInputsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CFFDFC2D58AA21009582C7 /* CalculatorInputsView.swift */; };
+		47CFFE002D58AA21009582C7 /* CalculatorInputsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CFFDFD2D58AA21009582C7 /* CalculatorInputsViewModel.swift */; };
+		47CFFE092D58AF22009582C7 /* CalculationResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CFFE062D58AF22009582C7 /* CalculationResultsView.swift */; };
+		47CFFE0A2D58AF22009582C7 /* CalculationResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CFFE072D58AF22009582C7 /* CalculationResultsViewModel.swift */; };
+		47CFFE102D58B78B009582C7 /* CalculationChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CFFE0E2D58B78B009582C7 /* CalculationChart.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -150,6 +157,13 @@
 		47CFFDDD2D568C28009582C7 /* CreateFinanceItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFinanceItemViewModel.swift; sourceTree = "<group>"; };
 		47CFFDE12D569652009582C7 /* UIImage+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Additions.swift"; sourceTree = "<group>"; };
 		47CFFDE62D576AFC009582C7 /* FinanceItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceItemView.swift; sourceTree = "<group>"; };
+		47CFFDF12D58A7BD009582C7 /* StartCalculationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartCalculationView.swift; sourceTree = "<group>"; };
+		47CFFDF22D58A7BD009582C7 /* StartCalculationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartCalculationViewModel.swift; sourceTree = "<group>"; };
+		47CFFDFC2D58AA21009582C7 /* CalculatorInputsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorInputsView.swift; sourceTree = "<group>"; };
+		47CFFDFD2D58AA21009582C7 /* CalculatorInputsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorInputsViewModel.swift; sourceTree = "<group>"; };
+		47CFFE062D58AF22009582C7 /* CalculationResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationResultsView.swift; sourceTree = "<group>"; };
+		47CFFE072D58AF22009582C7 /* CalculationResultsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationResultsViewModel.swift; sourceTree = "<group>"; };
+		47CFFE0E2D58B78B009582C7 /* CalculationChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationChart.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -481,6 +495,7 @@
 			children = (
 				4738A5042D52540100F899FD /* Home */,
 				47CFFDCE2D56862B009582C7 /* FinanceFlow */,
+				47CFFDF42D58A7BD009582C7 /* CalculatorFlow */,
 				4738A5142D52609200F899FD /* Tips */,
 				4738A5222D536FA100F899FD /* SettingsFlow */,
 			);
@@ -632,6 +647,52 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		47CFFDF32D58A7BD009582C7 /* StartCalculatin */ = {
+			isa = PBXGroup;
+			children = (
+				47CFFDF12D58A7BD009582C7 /* StartCalculationView.swift */,
+				47CFFDF22D58A7BD009582C7 /* StartCalculationViewModel.swift */,
+			);
+			path = StartCalculatin;
+			sourceTree = "<group>";
+		};
+		47CFFDF42D58A7BD009582C7 /* CalculatorFlow */ = {
+			isa = PBXGroup;
+			children = (
+				47CFFDF32D58A7BD009582C7 /* StartCalculatin */,
+				47CFFDFE2D58AA21009582C7 /* CalculatorInputs */,
+				47CFFE082D58AF22009582C7 /* CalculationResults */,
+			);
+			path = CalculatorFlow;
+			sourceTree = "<group>";
+		};
+		47CFFDFE2D58AA21009582C7 /* CalculatorInputs */ = {
+			isa = PBXGroup;
+			children = (
+				47CFFDFC2D58AA21009582C7 /* CalculatorInputsView.swift */,
+				47CFFDFD2D58AA21009582C7 /* CalculatorInputsViewModel.swift */,
+			);
+			path = CalculatorInputs;
+			sourceTree = "<group>";
+		};
+		47CFFE082D58AF22009582C7 /* CalculationResults */ = {
+			isa = PBXGroup;
+			children = (
+				47CFFE0F2D58B78B009582C7 /* Views */,
+				47CFFE062D58AF22009582C7 /* CalculationResultsView.swift */,
+				47CFFE072D58AF22009582C7 /* CalculationResultsViewModel.swift */,
+			);
+			path = CalculationResults;
+			sourceTree = "<group>";
+		};
+		47CFFE0F2D58B78B009582C7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				47CFFE0E2D58B78B009582C7 /* CalculationChart.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -746,6 +807,8 @@
 				4738A50C2D5259FA00F899FD /* DashedContainerView.swift in Sources */,
 				4738A4A72D521BA100F899FD /* TabBarViewModel.swift in Sources */,
 				47CFFDE82D576AFC009582C7 /* FinanceItemView.swift in Sources */,
+				47CFFDFF2D58AA21009582C7 /* CalculatorInputsView.swift in Sources */,
+				47CFFE002D58AA21009582C7 /* CalculatorInputsViewModel.swift in Sources */,
 				4738A4A92D521BA100F899FD /* CustomProgressView.swift in Sources */,
 				47CFFDD42D5686F3009582C7 /* NoFinanceItemsView.swift in Sources */,
 				4738A4AB2D521BA100F899FD /* Fonts.generated.swift in Sources */,
@@ -773,6 +836,8 @@
 				4738A4C02D521BA100F899FD /* OnboardingViewTabView.swift in Sources */,
 				4738A4C42D521BA100F899FD /* Colors.generated.swift in Sources */,
 				4738A4C72D521BA100F899FD /* UINavigationController+Additions.swift in Sources */,
+				47CFFE092D58AF22009582C7 /* CalculationResultsView.swift in Sources */,
+				47CFFE0A2D58AF22009582C7 /* CalculationResultsViewModel.swift in Sources */,
 				4738A4C82D521BA100F899FD /* FileManager+Image.swift in Sources */,
 				4738A4C92D521BA100F899FD /* StartViewModel.swift in Sources */,
 				4738A4CA2D521BA100F899FD /* Double+Additions.swift in Sources */,
@@ -788,9 +853,12 @@
 				4738A4D52D521BA100F899FD /* RootContentView.swift in Sources */,
 				4738A4D62D521BA100F899FD /* TabBarCustomView.swift in Sources */,
 				47CFFDC42D56819C009582C7 /* FAQCell.swift in Sources */,
+				47CFFDF52D58A7BD009582C7 /* StartCalculationView.swift in Sources */,
+				47CFFDF62D58A7BD009582C7 /* StartCalculationViewModel.swift in Sources */,
 				4738A4D92D521BA100F899FD /* SceneDelegate.swift in Sources */,
 				4738A4DC2D521BA100F899FD /* DefaultsService.swift in Sources */,
 				4738A4DE2D521BA100F899FD /* View+Additions.swift in Sources */,
+				47CFFE102D58B78B009582C7 /* CalculationChart.swift in Sources */,
 				4738A4DF2D521BA100F899FD /* RootViewController.swift in Sources */,
 				4738A4E02D521BA100F899FD /* TabBar.swift in Sources */,
 				4738A4E12D521BA100F899FD /* ShareSheet.swift in Sources */,

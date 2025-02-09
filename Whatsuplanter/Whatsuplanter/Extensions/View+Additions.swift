@@ -18,8 +18,8 @@ extension View {
         }
     }
     
-    func share(url: String) {
-        let activityController = UIActivityViewController(activityItems: [url], applicationActivities: nil)
+    func share(items: [Any]) {
+        let activityController = UIActivityViewController(activityItems: items, applicationActivities: nil)
         
         if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
            let rootViewController = windowScene.windows.first?.rootViewController {
@@ -38,14 +38,18 @@ extension View {
         }
     }
     
-    func convertMinutesInTime(minutes: Int) -> String {
-        // Calculate hours and minutes
-        let hours = minutes / 60
-        let minutes = minutes % 60
-
-        // Format as "HH:mm"
-        let formattedTime = String(format: "%02d:%02d", hours, minutes)
-        return formattedTime
+    // Функція для знімку екрану
+    func captureScreenshot() -> UIImage? {
+        // Отримуємо доступ до основної сцени
+        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+              let window = windowScene.windows.first(where: { $0.isKeyWindow }) else {
+            return nil
+        }
+        
+        let renderer = UIGraphicsImageRenderer(size: CGSize(width: window.bounds.width, height: window.bounds.height))
+        return renderer.image { ctx in
+            window.layer.render(in: ctx.cgContext)
+        }
     }
 }
 

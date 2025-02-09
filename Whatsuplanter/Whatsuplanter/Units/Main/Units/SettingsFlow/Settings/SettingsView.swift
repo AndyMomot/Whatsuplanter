@@ -79,6 +79,24 @@ struct SettingsView: View {
                             }
                             
                             DashedContainerView {
+                                VStack(spacing: 16) {
+                                    CustomTextField(
+                                        title: "Összegyűjtött pénzeszközök",
+                                        titleColor: .black,
+                                        text: $viewModel.currentAmount
+                                    )
+                                    
+                                    CustomTextField(
+                                        title: "Begyűjtendő cél",
+                                        titleColor: .black,
+                                        text: $viewModel.targetAmount
+                                    )
+                                }
+                            }
+                            .disabled(!viewModel.isCanEdit)
+                            .keyboardType(.numberPad)
+                            
+                            DashedContainerView {
                                 VStack(spacing: 20) {
                                     SettingsButton(
                                         imageName: Asset.gardeningTipsIcon.name,
@@ -117,24 +135,6 @@ struct SettingsView: View {
                                         }
                                     )
                             }
-                            
-                            DashedContainerView {
-                                VStack(spacing: 16) {
-                                    CustomTextField(
-                                        title: "Összegyűjtött pénzeszközök",
-                                        titleColor: .black,
-                                        text: $viewModel.currentAmount
-                                    )
-                                    
-                                    CustomTextField(
-                                        title: "Begyűjtendő cél",
-                                        titleColor: .black,
-                                        text: $viewModel.targetAmount
-                                    )
-                                }
-                            }
-                            .disabled(!viewModel.isCanEdit)
-                            .keyboardType(.numberPad)
                         }
                         .padding(.horizontal)
                         .padding(.bottom)

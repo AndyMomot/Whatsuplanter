@@ -23,7 +23,7 @@ struct FinanceView: View {
                     ScrollView {
                         VStack(spacing: 16) {
                             if viewModel.financeItems.isEmpty {
-                                NoFinanceItemsView()
+                                NoFinanceItemsView(item: viewModel.noFinanceItem)
                             } else {
                                 ForEach(viewModel.financeItems) { item in
                                     FinanceItemView(item: item) { _ in

@@ -8,31 +8,49 @@
 import SwiftUI
 
 struct NoFinanceItemsView: View {
+    let item: Item
     
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
-            Text("Hozza létre saját közösségi finanszírozási kampányát")
+            Text(item.title)
                 .foregroundStyle(.black)
                 .font(Fonts.DMSans.bold.swiftUIFont(size: 16))
             
-            Text("Indítson kampányt ökozónája létrehozására. Írja le ötletét, állítsa be a pénzügyi célt, adjon hozzá képeket, és vonja be a támogatókat.")
+            Text(item.message)
                 .foregroundStyle(.charcoalBlue)
                 .font(Fonts.DMSans.regular.swiftUIFont(size: 14))
             
             VStack(alignment: .leading, spacing: 10) {
-                row(index: 1, text: "Írja le a projektjét")
-                row(index: 2, text: "Állítson be célokat és adjon jutalmakat a támogatóknak")
-                row(index: 3, text: "Ossza meg a kampányt és gyűjtsön pénzt")
+                Text(item.rowTitle)
+                    .foregroundStyle(.black)
+                    .font(Fonts.DMSans.bold.swiftUIFont(size: 16))
+                ForEach(item.rows) { item in
+                    row(index: item.id, text: item.text)
+                }
             }
             
             Spacer()
             
-            Asset.finance.swiftUIImage
+            Image(item.image)
                 .resizable()
                 .scaledToFit()
             
             Spacer()
         }
+    }
+}
+
+extension NoFinanceItemsView {
+    struct Item {
+        var title, message: String
+        var rowTitle: String
+        var rows: [Row]
+        var image: String
+    }
+    
+    struct Row: Identifiable {
+        var id: Int
+        var text: String
     }
 }
 
@@ -54,6 +72,16 @@ private extension NoFinanceItemsView {
 }
 
 #Preview {
-    NoFinanceItemsView()
+    NoFinanceItemsView(
+        item: .init(title: "Hozza létre saját közösségi finanszírozási kampányát",
+                    message: "Indítson kampányt ökozónája létrehozására. Írja le ötletét, állítsa be a pénzügyi célt, adjon hozzá képeket, és vonja be a támogatókat.",
+                    rowTitle: "Hogyan működik?",
+                    rows: [
+                        .init(id: 1, text: "Írja le a projektjét"),
+                        .init(id: 2, text: "Állítson be célokat és adjon jutalmakat a támogatóknak"),
+                        .init(id: 3, text: "Ossza meg a kampányt és gyűjtsön pénzt")
+                    ],
+                    image: Asset.finance.name)
+    )
         .padding()
 }
